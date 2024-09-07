@@ -1,10 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 # 设置用户信息和端口
-user = ' '  # 用户名
-password = ' ' # 登录密码
-output = 8     # 出口
-time = 0
+user = 'String'     # 用户名
+password = 'String' # 登录密码
+output = 8          # 8 为移动国际出口
+time = 0            # 0 为永久开启
 cmd = 'set'
 
 # URL
