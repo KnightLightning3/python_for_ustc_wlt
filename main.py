@@ -61,7 +61,7 @@ data = {
     'type': output,
     'exp': time
 }
-
+print("Requesting...",end='\r')
 # 发送POST请求
 response = requests.post(url, data=data)
 response.encoding = 'GBK'
@@ -96,7 +96,7 @@ for row in log_rows[1:]:
 print("登录日志:")
 for log in logs:
     print("\033[34m" + log['时间'] + "\033[0m" + " - " + "\033[32m" + log['消息'] + "\033[0m")
-
+print("Checking internet...",end='\r')
 # 通过访问baidu.com检查网络连接情况
 response = requests.get('http://www.baidu.com')
 if response.status_code == 200:

@@ -60,11 +60,11 @@ data = {
     'type': output,
     'exp': time
 }
-
+print("Requesting...",end='\r')
 # 发送POST请求
 response = requests.post(url, data=data)
 response.encoding = 'GBK'
-
+print("Checking internet...",end='\r')
 # 通过访问baidu.com检查网络连接情况
 response = requests.get('http://www.baidu.com')
 if response.status_code == 200:
