@@ -1,4 +1,16 @@
 import requests
+
+def test_connection():
+    response = requests.get('http://www.baidu.com')
+    if response.status_code == 200:
+        print("\033[42;37m\033[1m网络连接正常,测试用网址：baidu.com\033[0m")
+        return True
+    else:
+        return False
+    
+if test_connection():
+    exit(0)
+
 import os
 import configparser
 
@@ -65,7 +77,5 @@ data = {
 response = requests.post(url, data=data)
 response.encoding = 'GBK'
 
-# 通过访问baidu.com检查网络连接情况
-response = requests.get('http://www.baidu.com')
-if response.status_code == 200:
-    print("\033[42;37m\033[1m网络连接正常,测试用网址：baidu.com\033[0m")
+if test_connection():
+    exit(0)
