@@ -7,6 +7,7 @@ def test_connection():
             print("\033[42;37m\033[1m网络连接正常,测试用网址：baidu.com\033[0m")
             return True
         else:
+            print("\033[41;37m\033[1m未连接到网络,测试用网址：baidu.com\033[0m")
             return False
     except:
         return False
